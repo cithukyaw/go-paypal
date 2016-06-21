@@ -1,15 +1,20 @@
-<?
+<?php
 /**
- * Program      : PayPal.class
- * Version      : 1.0
- * Author       : STK
- * Abstract : Paypal API helper
- *  (1)
- *  Generate HTML Forms for Paypal AI, including Buy now, Donations, Subscriptions, Shopping carts and Gift certificates.
- *  Please look at Example folder or examples.
- *  (2)
- *  Process Paypal payments and return transactions from paypal so you can do all processing.
-**/
+ * This class can generate HTML for Paypal buttons and forms.
+ * It can set a list of parameters for the payments and generates HTML
+ * to embed in pages several types of buttons and forms to redirect the user
+ * to perform the specified payments in the PayPal site.
+ *
+ * @package     GoPayPal
+ * @copyright   Copyright (c), GoPayPal
+ * @author      Sithu K. <cithukyaw@gmail.com>
+ * @link        https://github.com/cithukyaw/go-paypal
+ * @license     http://www.opensource.org/licenses/mit-license.php MIT License
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE
+ */
+
 define('PAYPAL_SANDBOX_SUBMIT_URL', 'https://www.sandbox.paypal.com/cgi-bin/webscr');
 define('PAYPAL_SUBMIT_URL', 'https://www.paypal.com/cgi-bin/webscr');
 /**
@@ -150,7 +155,7 @@ class GoPayPal{
     /**
      * Access Public
      * Set custom button html without using PayPal button. This will override default PayPal button
-     * @param	: $html (string) - HTML string
+     * @param   : $html (string) - HTML string
      */
     public function setButton($html){
         $this->button = $html;
@@ -158,7 +163,7 @@ class GoPayPal{
     /**
      * Access Public
      * Add GoPayPalCartItem object to GoPayPal object for shopping cart items
-     * @param	: $item (object) - GoPayPalCartItem object
+     * @param   : $item (object) - GoPayPalCartItem object
      */
     public function addItem($item){
         $this->cartItems[] = $item;
