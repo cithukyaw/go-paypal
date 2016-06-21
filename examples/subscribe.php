@@ -26,7 +26,7 @@ $paypal->set('cbt', 'Return to our site to validate your payment!'); # caption o
 echo $paypal->html();
 
 if(sizeof($_POST)){
-	echo '<pre>'; print_r($_POST); echo '</pre>';
+    echo '<pre>'; print_r($_POST); echo '</pre>';
 }
 
 ###################
@@ -34,27 +34,27 @@ if(sizeof($_POST)){
 ###################
 # If you want to use other HTML between paypal form opening and close tag, use getHtml(), but write </form> by yourself
 /*
-	$paypal = new GoPayPalSUBSCRIBE);
-	$paypal->sandbox = true;
-	//$paypal->openInNewWindow = true;
-	$paypal->set('business', 'cithukyaw@gmail.com');
-	$paypal->set('currency_code', 'SGD');
-	$paypal->set('country', 'SG');
-	$paypal->set('item_name', 'Subscription');
-	$paypal->set('a3', 10);
-	$paypal->set('p3', 2);
-	$paypal->set('t3', 'W');
-	$paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
-	$paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
-	$paypal->set('no_note', 0);
-	$paypal->set('custom', 'sderbvderereewe');
-	$paypal->set('rm', 2);
-	$paypal->set('cbt', 'Return to our site to validate your payment!');
-	
-	echo $paypal->getHtml();
-	?>
-	<div>
-		<button type="submit">Pay PayPal - The safer, easier way to pay online!</button>
-	</div>
-	</form>
+    $paypal = new GoPayPalSUBSCRIBE);
+    $paypal->sandbox = true;
+    //$paypal->openInNewWindow = true;
+    $paypal->set('business', 'cithukyaw@gmail.com');
+    $paypal->set('currency_code', 'SGD');
+    $paypal->set('country', 'SG');
+    $paypal->set('item_name', 'Subscription');
+    $paypal->set('a3', 10);
+    $paypal->set('p3', 2);
+    $paypal->set('t3', 'W');
+    $paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
+    $paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
+    $paypal->set('no_note', 0);
+    $paypal->set('custom', 'sderbvderereewe');
+    $paypal->set('rm', 2);
+    $paypal->set('cbt', 'Return to our site to validate your payment!');
+
+    echo $paypal->getHtml();
+    ?>
+    <div>
+        <button type="submit">Pay PayPal - The safer, easier way to pay online!</button>
+    </div>
+    </form>
 */

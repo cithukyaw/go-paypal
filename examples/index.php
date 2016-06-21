@@ -9,14 +9,14 @@ if(isset($_GET['api']) && $_GET['api']) $api = $_GET['api'];
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>PayPal API Example</title>
     <style type="text/css">
-		#menu a{ color:#0088cc; padding:3px 7px; display:inline-block; font:12px Arial, Helvetica, sans-serif; }
-		#menu a.active{ background:#666; color:#fff; }
-		#form{ margin:10px 0; }
-	</style>
+        #menu a{ color:#0088cc; padding:3px 7px; display:inline-block; font:12px Arial, Helvetica, sans-serif; }
+        #menu a.active{ background:#666; color:#fff; }
+        #form{ margin:10px 0; }
+    </style>
 </head>
 <body>
-	<div id="menu">
-    	<a href="index.php?api=buynow" <?php if($api == 'buynow') echo 'class="active"'; ?>>Buy Now</a> |
+    <div id="menu">
+        <a href="index.php?api=buynow" <?php if($api == 'buynow') echo 'class="active"'; ?>>Buy Now</a> |
         <a href="index.php?api=subscribe" <?php if($api == 'subscribe') echo 'class="active"'; ?>>Subscribe</a> |
         <a href="index.php?api=donation" <?php if($api == 'donation') echo 'class="active"'; ?>>Donation</a> |
         <a href="index.php?api=gift_certificate" <?php if($api == 'gift_certificate') echo 'class="active"'; ?>>Gift Certificate</a> |
@@ -24,7 +24,7 @@ if(isset($_GET['api']) && $_GET['api']) $api = $_GET['api'];
         <a href="index.php?api=thirdpartycart" <?php if($api == 'thirdpartycart') echo 'class="active"'; ?>>Third Party Shopping Cart</a>
     </div>
     <div id="form">
-    	<?php include($api.'.php') ?>
+        <?php include($api.'.php') ?>
     </div>
 </body>
 </html>
