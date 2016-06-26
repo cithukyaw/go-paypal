@@ -3,18 +3,18 @@
 # Using html() #
 ################
 $paypal = new GoPayPal(SUBSCRIBE);
-//$paypal->sandbox = true;
-//$paypal->openInNewWindow = true;
-$paypal->set('business', 'cithukyaw@gmail.com');
+$paypal->sandbox = true;
+$paypal->openInNewWindow = true;
+$paypal->set('business', 'stk-business@gmail.com');
 $paypal->set('currency_code', 'SGD');
 $paypal->set('country', 'SG');
 $paypal->set('item_name', 'Subscription');
 $paypal->set('a3', 10);
 $paypal->set('p3', 2);
 $paypal->set('t3', 'W');
-$paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
-$paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
-$paypal->set('notify_url', 'http://cithu.0fees.net/GoPayPal/Example/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
@@ -34,27 +34,28 @@ if(sizeof($_POST)){
 ###################
 # If you want to use other HTML between paypal form opening and close tag, use getHtml(), but write </form> by yourself
 /*
-    $paypal = new GoPayPalSUBSCRIBE);
-    $paypal->sandbox = true;
-    //$paypal->openInNewWindow = true;
-    $paypal->set('business', 'cithukyaw@gmail.com');
-    $paypal->set('currency_code', 'SGD');
-    $paypal->set('country', 'SG');
-    $paypal->set('item_name', 'Subscription');
-    $paypal->set('a3', 10);
-    $paypal->set('p3', 2);
-    $paypal->set('t3', 'W');
-    $paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
-    $paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=subscribe');
-    $paypal->set('no_note', 0);
-    $paypal->set('custom', 'sderbvderereewe');
-    $paypal->set('rm', 2);
-    $paypal->set('cbt', 'Return to our site to validate your payment!');
+$paypal = new GoPayPal(SUBSCRIBE);
+$paypal->sandbox = true;
+$paypal->openInNewWindow = true;
+$paypal->set('business', 'stk-business@gmail.com');
+$paypal->set('currency_code', 'SGD');
+$paypal->set('country', 'SG');
+$paypal->set('item_name', 'Subscription');
+$paypal->set('a3', 10);
+$paypal->set('p3', 2);
+$paypal->set('t3', 'W');
+$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('rm', 2); # return by POST
+$paypal->set('no_note', 0);
+$paypal->set('custom', md5(time()));
+$paypal->set('cbt', 'Return to our site to validate your payment!'); # caption override for "Return to Merchant" button
 
-    echo $paypal->getHtml();
-    ?>
-    <div>
-        <button type="submit">Pay PayPal - The safer, easier way to pay online!</button>
-    </div>
-    </form>
+echo $paypal->getHtml();
+?>
+<div>
+    <button type="submit">Pay PayPal - The safer, easier way to pay online!</button>
+</div>
+</form>
 */

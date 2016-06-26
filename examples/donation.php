@@ -4,16 +4,16 @@
 ################
 
 $paypal = new GoPayPal(DONATE);
-//$paypal->sandbox = true;
+$paypal->sandbox = true;
 $paypal->openInNewWindow = true;
-$paypal->set('business', 'cithukyaw@gmail.com');
+$paypal->set('business', 'stk-business@gmail.com');
 $paypal->set('currency_code', 'SGD');
 $paypal->set('country', 'SG');
 $paypal->set('item_name','My donation');
 $paypal->set('amount','50');
-$paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=donation');
-$paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=donation');
-$paypal->set('notify_url', 'http://cithu.0fees.net/GoPayPal/Example/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=donation');
+$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=donation');
+$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
@@ -32,25 +32,25 @@ if(sizeof($_POST)){
 ###################
 # If you want to use other HTML between paypal form opening and close tag, use getHtml(), but write </form> by yourself
 /*
-    $paypal = new GoPayPalDONATE);
-    $paypal->sandbox = true;
-    $paypal->openInNewWindow = true;
-    $paypal->set('business', 'cithukyaw@gmail.com');
-    $paypal->set('currency_code', 'SGD');
-    $paypal->set('country', 'SG');
-    $paypal->set('item_name','My donation');
-    $paypal->set('amount','50');
-    $paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=donation');
-    $paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=donation');
-    $paypal->set('notify_url', 'http://cithu.0fees.net/GoPayPal/Example/payment_complete.php'); # rm must be 2, need to be hosted online
-    $paypal->set('rm', 2); # return by POST
-    $paypal->set('no_note', 0);
-    $paypal->set('custom', md5(time()));
+$paypal = new GoPayPal(DONATE);
+$paypal->sandbox = true;
+$paypal->openInNewWindow = true;
+$paypal->set('business', 'stk-business@gmail.com');
+$paypal->set('currency_code', 'SGD');
+$paypal->set('country', 'SG');
+$paypal->set('item_name','My donation');
+$paypal->set('amount','50');
+$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=donation');
+$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=donation');
+$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('rm', 2); # return by POST
+$paypal->set('no_note', 0);
+$paypal->set('custom', md5(time()));
 
-    echo $paypal->getHtml();
-    ?>
-    <div>
-        <button type="submit">Donate via PayPal</button>
-    </div>
-    </form>
+echo $paypal->getHtml();
+?>
+<div>
+    <button type="submit">Donate via PayPal</button>
+</div>
+</form>
 */

@@ -3,21 +3,21 @@
 # Using html() #
 ################
 $paypal = new GoPayPal(THIRD_PARTY_CART);
-//$paypal->sandbox = true;
+$paypal->sandbox = true;
 $paypal->openInNewWindow = true;
-$paypal->set('business', 'cithukyaw@gmail.com');
+$paypal->set('business', 'stk-business@gmail.com');
 $paypal->set('currency_code', 'SGD');
 $paypal->set('country', 'SG');
-$paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=thirdpartycart');
-$paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=thirdpartycart');
-$paypal->set('notify_url', 'http://cithu.0fees.net/GoPayPal/Example/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
 $paypal->set('cbt', 'Return to our site to validate your payment!'); # caption override for "Return to Merchant" button
 // $paypal->set('shipping', 5); # this doesn't work for THIRD_PARTY_CART
 $paypal->set('handling_cart', 1); # this overide the individual items' handling "handling_x"
-$paypal->set('tax_cart', 0.29);
+$paypal->set('tax_cart', 0.99);
 # Add first item
     $item = new GoPayPalCartItem();
     $item->set('item_name', 'Drupal for Dummies');
@@ -50,19 +50,22 @@ if(sizeof($_POST)){
 ###################
 # If you want to use other HTML between paypal form opening and close tag, use getHtml(), but write </form> by yourself
 /*
-    $paypal = new GoPayPalTHIRD_PARTY_CART);
+    $paypal = new GoPayPal(THIRD_PARTY_CART);
     $paypal->sandbox = true;
     $paypal->openInNewWindow = true;
-    $paypal->set('business', 'cithukyaw@gmail.com');
+    $paypal->set('business', 'stk-business@gmail.com');
     $paypal->set('currency_code', 'SGD');
     $paypal->set('country', 'SG');
-    $paypal->set('return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=thirdpartycart');
-    $paypal->set('cancel_return', 'http://cithu.0fees.net/GoPayPal/Example/index.php?api=thirdpartycart');
-    $paypal->set('notify_url', 'http://cithu.0fees.net/GoPayPal/Example/payment_complete.php'); # rm must be 2, need to be hosted online
+    $paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+    $paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+    $paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+    $paypal->set('rm', 2); # return by POST
     $paypal->set('no_note', 0);
     $paypal->set('custom', md5(time()));
-    $paypal->set('rm', 2); # return by POST
     $paypal->set('cbt', 'Return to our site to validate your payment!'); # caption override for "Return to Merchant" button
+    // $paypal->set('shipping', 5); # this doesn't work for THIRD_PARTY_CART
+    $paypal->set('handling_cart', 1); # this overide the individual items' handling "handling_x"
+    $paypal->set('tax_cart', 0.29);
     # Add first item
         $item = new GoPayPalCartItem();
         $item->set('item_name', 'Drupal for Dummies');
@@ -70,7 +73,7 @@ if(sizeof($_POST)){
         $item->set('amount', 9.99);
         $item->set('quantity', 1);
         $item->set('shipping', 1.5);
-        $item->set('handling', 1);
+        $item->set('handling', 1); # this is overriden by "handling_cart"
     $paypal->addItem($item);
     # Add second item
         $item = new GoPayPalCartItem();
@@ -79,7 +82,7 @@ if(sizeof($_POST)){
         $item->set('amount', 9.99);
         $item->set('quantity', 1);
         $item->set('shipping', 1.5);
-        $item->set('handling', 1);
+        $item->set('handling', 1); # this is overriden by "handling_cart"
     $paypal->addItem($item);
 
     echo $paypal->getHtml();
