@@ -35,7 +35,7 @@ These following constants are needed to use when creating GoPayPal class instant
 
 # Documentation for HTML variables
 
-HTML-Form-&-Variables-Basics-for-PayPal-Website-Payments-Standard.htm
+[HTML Variables for PayPal Website Payments Standard](http://sithukyaw.com/GoPayPal/doc)
 
 # Examples
 
