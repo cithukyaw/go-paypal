@@ -12,9 +12,9 @@ $paypal->set('item_name', 'Subscription');
 $paypal->set('a3', 10);
 $paypal->set('p3', 2);
 $paypal->set('t3', 'W');
-$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
-$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
-$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('cancel_return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
@@ -44,9 +44,9 @@ $paypal->set('item_name', 'Subscription');
 $paypal->set('a3', 10);
 $paypal->set('p3', 2);
 $paypal->set('t3', 'W');
-$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
-$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
-$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('cancel_return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=subscribe');
+$paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));

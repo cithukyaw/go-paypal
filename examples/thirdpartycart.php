@@ -8,9 +8,9 @@ $paypal->openInNewWindow = true;
 $paypal->set('business', 'stk-business@gmail.com');
 $paypal->set('currency_code', 'SGD');
 $paypal->set('country', 'SG');
-$paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
-$paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
-$paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+$paypal->set('cancel_return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+$paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
@@ -56,9 +56,9 @@ if(sizeof($_POST)){
     $paypal->set('business', 'stk-business@gmail.com');
     $paypal->set('currency_code', 'SGD');
     $paypal->set('country', 'SG');
-    $paypal->set('return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
-    $paypal->set('cancel_return', 'http://sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
-    $paypal->set('notify_url', 'http://sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+    $paypal->set('return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+    $paypal->set('cancel_return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=thirdpartycart');
+    $paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
     $paypal->set('rm', 2); # return by POST
     $paypal->set('no_note', 0);
     $paypal->set('custom', md5(time()));
