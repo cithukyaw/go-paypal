@@ -35,10 +35,10 @@ These following constants are needed to use when creating GoPayPal class instant
 
 # Documentation for HTML variables
 
-[HTML Variables for PayPal Website Payments Standard](http://sithukyaw.com/GoPayPal/doc)
+[HTML Variables for PayPal Website Payments Standard](http://www.phplucidframe.com/sithu/GoPayPal/doc)
 
 # Examples
 
 All API usages are available in the [examples](https://github.com/cithukyaw/go-paypal/tree/master/examples) directory
 
-Live examples are available at [sithukyaw.com/GoPayPal](http://sithukyaw.com/GoPayPal)
+Live examples are available at [sithukyaw.com/GoPayPal](http://www.phplucidframe.com/sithu/GoPayPal)

@@ -1,5 +1,5 @@
 <?php
-include('../GoPayPal.php');
+include(__DIR__.'/../GoPayPal.php');
 
 $api = 'buynow';
 if(isset($_GET['api']) && $_GET['api']) {
@@ -19,12 +19,12 @@ if(isset($_GET['api']) && $_GET['api']) {
 </head>
 <body>
     <div id="menu">
-        <a href="index.php?api=buynow" <?php if($api == 'buynow') echo 'class="active"'; ?>>Buy Now</a> |
-        <a href="index.php?api=subscribe" <?php if($api == 'subscribe') echo 'class="active"'; ?>>Subscribe</a> |
-        <a href="index.php?api=donation" <?php if($api == 'donation') echo 'class="active"'; ?>>Donation</a> |
-        <a href="index.php?api=gift_certificate" <?php if($api == 'gift_certificate') echo 'class="active"'; ?>>Gift Certificate</a> |
-        <a href="index.php?api=individual_paypalcart" <?php if($api == 'individual_paypalcart') echo 'class="active"'; ?>>Individual PayPal Cart</a> |
-        <a href="index.php?api=thirdpartycart" <?php if($api == 'thirdpartycart') echo 'class="active"'; ?>>Third Party Shopping Cart</a>
+        <a href="?api=buynow" <?php if($api == 'buynow') echo 'class="active"'; ?>>Buy Now</a> |
+        <a href="?api=subscribe" <?php if($api == 'subscribe') echo 'class="active"'; ?>>Subscribe</a> |
+        <a href="?api=donation" <?php if($api == 'donation') echo 'class="active"'; ?>>Donation</a> |
+        <a href="?api=gift_certificate" <?php if($api == 'gift_certificate') echo 'class="active"'; ?>>Gift Certificate</a> |
+        <a href="?api=individual_paypalcart" <?php if($api == 'individual_paypalcart') echo 'class="active"'; ?>>Individual PayPal Cart</a> |
+        <a href="?api=thirdpartycart" <?php if($api == 'thirdpartycart') echo 'class="active"'; ?>>Third Party Shopping Cart</a>
     </div>
     <div id="form">
         <?php include($api.'.php') ?>

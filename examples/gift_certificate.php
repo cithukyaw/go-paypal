@@ -14,8 +14,8 @@ $paypal->set('item_number','001');
 $paypal->set('amount','50');
 $paypal->set('min_denom','10');
 $paypal->set('max_denom','500');
-$paypal->set('shopping_url', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=gift_certificate');
-$paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('shopping_url', 'http://www.phplucidframe.com/sithu/GoPayPal?api=gift_certificate');
+$paypal->set('notify_url', 'http://www.phplucidframe.com/sithu/GoPayPal/return'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
@@ -45,8 +45,8 @@ $paypal->set('item_number','001');
 $paypal->set('amount','50');
 $paypal->set('min_denom','10');
 $paypal->set('max_denom','500');
-$paypal->set('shopping_url', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php?api=gift_certificate');
-$paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('shopping_url', 'http://www.phplucidframe.com/sithu/GoPayPal?api=gift_certificate');
+$paypal->set('notify_url', 'http://www.phplucidframe.com/sithu/GoPayPal/return'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));

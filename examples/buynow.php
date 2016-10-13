@@ -9,9 +9,9 @@ $paypal->openInNewWindow = true;
 $paypal->set('business', 'stk-business@gmail.com');
 $paypal->set('currency_code', 'SGD');
 $paypal->set('country', 'SG');
-$paypal->set('return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php');
-$paypal->set('cancel_return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php');
-$paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://www.phplucidframe.com/sithu/GoPayPal/examples');
+$paypal->set('cancel_return', 'http://www.phplucidframe.com/sithu/GoPayPal/examples');
+$paypal->set('notify_url', 'http://www.phplucidframe.com/sithu/GoPayPal/return'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
@@ -46,9 +46,9 @@ $paypal->openInNewWindow = true;
 $paypal->set('business', 'stk-business@gmail.com');
 $paypal->set('currency_code', 'SGD');
 $paypal->set('country', 'SG');
-$paypal->set('return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php');
-$paypal->set('cancel_return', 'http://projects.sithukyaw.com/GoPayPal/examples/index.php');
-$paypal->set('notify_url', 'http://projects.sithukyaw.com/GoPayPal/examples/payment_complete.php'); # rm must be 2, need to be hosted online
+$paypal->set('return', 'http://www.phplucidframe.com/sithu/GoPayPal/examples');
+$paypal->set('cancel_return', 'http://www.phplucidframe.com/sithu/GoPayPal/examples');
+$paypal->set('notify_url', 'http://www.phplucidframe.com/sithu/GoPayPal/return'); # rm must be 2, need to be hosted online
 $paypal->set('rm', 2); # return by POST
 $paypal->set('no_note', 0);
 $paypal->set('custom', md5(time()));
